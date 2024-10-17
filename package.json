@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.0.23"
+  },
+  "scripts": {
+    "build": "npx tailwindcss -i ./style/tailwind.css -o public/css/style.css --watch"
+  },
+  "dependencies": {
+    "php": "^1.1.0"
+  }
+}
