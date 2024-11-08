@@ -19,6 +19,15 @@ class Comments
     #[ORM\Column(length: 255)]
     private ?string $status = null;
 
+    #[ORM\ManyToOne]
+    private ?User $user_id = null;
+
+    #[ORM\ManyToOne]
+    private ?Media $media_id = null;
+
+    #[ORM\ManyToOne(targetEntity: self::class)]
+    private ?self $parent_comment_id = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +53,42 @@ class Comments
     public function setStatus(string $status): static
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function getUserId(): ?User
+    {
+        return $this->user_id;
+    }
+
+    public function setUserId(?User $user_id): static
+    {
+        $this->user_id = $user_id;
+
+        return $this;
+    }
+
+    public function getMediaId(): ?Media
+    {
+        return $this->media_id;
+    }
+
+    public function setMediaId(?Media $media_id): static
+    {
+        $this->media_id = $media_id;
+
+        return $this;
+    }
+
+    public function getParentCommentId(): ?self
+    {
+        return $this->parent_comment_id;
+    }
+
+    public function setParentCommentId(?self $parent_comment_id): static
+    {
+        $this->parent_comment_id = $parent_comment_id;
 
         return $this;
     }

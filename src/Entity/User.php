@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
@@ -22,6 +24,9 @@ class User
 
     #[ORM\Column(length: 255)]
     private ?string $password = null;
+
+    #[ORM\ManyToOne]
+    private ?Subscriptions $current_subscription_id = null;
 
     public function getId(): ?int
     {
@@ -60,6 +65,18 @@ class User
     public function setPassword(string $password): static
     {
         $this->password = $password;
+
+        return $this;
+    }
+
+    public function getCurrentSubscriptionId(): ?Subscriptions
+    {
+        return $this->current_subscription_id;
+    }
+
+    public function setCurrentSubscriptionId(?Subscriptions $current_subscription_id): static
+    {
+        $this->current_subscription_id = $current_subscription_id;
 
         return $this;
     }
