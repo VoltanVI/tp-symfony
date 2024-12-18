@@ -1,0 +1,13 @@
+App\Entity\Categories:
+    categories_1:
+        name: "Action"
+        label: "action"
+    categories_2:
+        name: "Comédie"
+        label: "comédie"
+    categories_3:
+        name: "Aventure",
+        label: "aventure"
+    categories_4:
+        name: "Science Fiction",
+        label: "science fiction"

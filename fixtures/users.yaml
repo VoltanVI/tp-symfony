@@ -1,0 +1,9 @@
+App\Entity\User:
+    users_1:
+        username: "app"
+        email: "app@app.com"
+        password: "Symfony24"
+    users_2:
+        username: "hugo"
+        email: "hugo@app.com"
+        password: "Test123!"
