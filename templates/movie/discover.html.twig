@@ -192,7 +192,7 @@
 
             <div class="mt-4 grid grid-cols-2 gap-y-5 sm:grid-cols-3 gap-x-5">
                 {% for category in categories %}
-                <a class="relative flex flex-row items-center justify-center rounded-xl overflow-hidden aspect-square border hover:scale-105 cursor-pointer transition hover:bg-gray-100">
+                <a class="relative flex flex-row items-center justify-center rounded-xl overflow-hidden aspect-square border hover:scale-105 cursor-pointer transition hover:bg-gray-100" href="{{ category.label }}">
                     <span class="text-red-600 font-bold mr-2">
                         <svg class="h-8 w-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             {% if category.name == "Action" %}

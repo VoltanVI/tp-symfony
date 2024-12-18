@@ -48,4 +48,10 @@ class HomeController extends AbstractController
         return $this->render('admin/admin_films.html.twig');
     }
 
+    #[Route('/action', name: 'action')]
+    public function action() : \Symfony\Component\HttpFoundation\Response
+    {
+        return $this->render('movie/category.html.twig');
+    }
+
 }
