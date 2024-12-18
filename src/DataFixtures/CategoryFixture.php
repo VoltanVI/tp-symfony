@@ -14,19 +14,19 @@ class CategoryFixture extends Fixture
         $c = [
             1 => [
                 'name' => 'Action',
-                'label' => 'Action'
+                'label' => 'action'
             ],
             2 => [
                 'name' => 'Aventure',
-                'label' => 'Aventure'
+                'label' => 'aventure'
             ],
             3 => [
                 'name' => 'Comédie',
-                'label' => 'Comédie'
+                'label' => 'comédie'
             ],
             4 => [
                 'name' => 'Science Fiction',
-                'label' => 'Science Fiction'
+                'label' => 'science_fiction'
             ]
         ];
 
